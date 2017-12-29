@@ -1,0 +1,29 @@
+
+<div class="dropdown"style="position:relative;left:100px;top:30px">
+ <button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown">Comments 
+   <span class="caret"></span></button>
+   <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="menu1">
+     <li><small><a (click)="updateLimit(0,50)">5</a></small></li>
+     <li><small><a (click)="updateLimit(50,100)">10</a></small></li>
+     <li><small><a (click)="updateLimit(100,300)">50</a></small></li>
+   <li><small><a (click)="updateLimit(300,500)">100</a></small></li>      
+   </ul>
+</div>
+<table class='table table-bordered'>
+  <tbody>
+ <tr *ngFor="let comment of commentList | paginate: {itemsPerPage: 10, currentPage:page, id: '1'}; let i = index"> 
+  <td> <small> Name : {{comment.name}}</small></td>
+<td><small> Email : {{comment.email}}</small></td>
+<td> <small>Comment : {{comment.body}}</small></td>
+</tr>
+</tbody>
+</table>
+<pagination-controls (pageChange)="page = $event" id="1"
+
+                      maxSize="10"
+
+                      directionLinks="true"
+
+                      autoHide="false">
+
+                </pagination-controls>

@@ -1,0 +1,24 @@
+
+<div class="app-content">
+  
+  <div class="group">
+
+    <form role="form" (submit)="login()"><br>
+      <h1>Details</h1>
+      
+        <input type="text" required [(ngModel)]="user.username" id="username" name="username" >
+        
+         Username
+    
+      <br><br>
+      
+        <input  type="password" required [(ngModel)]="user.password" id="password" name="password" >
+        
+          Password
+        
+      <br><br>
+      <button class="btn btn-primary" type="submit" name="action">LOGIN</button><br><br>
+      <span id="err"><small>{{errorMsg}}</small></span>
+    </form >
+  </div>
+</div>

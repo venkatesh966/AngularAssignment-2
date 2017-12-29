@@ -1,0 +1,18 @@
+
+<h1>You have successfully logged on</h1>
+      
+        <button  (click)="logout()">logout</button>
+        <nav class='navbar navbar-nav navbar-fixed-top'>
+          <div class='container-fluid'>
+            <a class='navbar-brand'>{{pageTitle}}</a>
+            <li><input type="button" class="btn btn-primary" value='ALBUM' [routerLink]="['/album']"></li>
+            
+        <li><input type="button" class="btn btn-primary" value='TODOS' [routerLink]="['/todos']"></li>
+        <li><input type="button" class="btn btn-primary" value='COMMENTS' [routerLink]="['/comments']"></li>
+            
+          
+          
+          </div>
+        </nav>
+        
+       

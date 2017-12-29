@@ -1,0 +1,15 @@
+td {
+    height: 50px;
+    vertical-align: bottom;
+    border:1px solid #369;
+}
+table {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border-collapse: collapse;
+}
+
+th {
+    height: 50px;
+}
